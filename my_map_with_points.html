@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_97d2fed05a638aff0a1d62e678015d08 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_97d2fed05a638aff0a1d62e678015d08" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_97d2fed05a638aff0a1d62e678015d08 = L.map(
+                "map_97d2fed05a638aff0a1d62e678015d08",
+                {
+                    center: [44.5, -89.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ef813c2512f086439c30967eaacadf68 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var tile_layer_1db07a6f44139e9fb1d545f1f5e6e509 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var tile_layer_68c405d3447308c194074537eeff0294 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var tile_layer_ea34fbaf07176bd07b3af6d20546b51b = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var layer_control_806e8deb53ca18a094d3fd9f6a87c14b = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_68c405d3447308c194074537eeff0294,
+                    "cartodbdark_matter" : tile_layer_1db07a6f44139e9fb1d545f1f5e6e509,
+                    "stamentoner" : tile_layer_ea34fbaf07176bd07b3af6d20546b51b,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_806e8deb53ca18a094d3fd9f6a87c14b.base_layers,
+                layer_control_806e8deb53ca18a094d3fd9f6a87c14b.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+            tile_layer_1db07a6f44139e9fb1d545f1f5e6e509.remove();
+            tile_layer_68c405d3447308c194074537eeff0294.remove();
+            tile_layer_ea34fbaf07176bd07b3af6d20546b51b.remove();
+        
+    
+            var marker_334890b3d1b501b2b5739aa1a218fcad = L.marker(
+                [43.1807556, -89.2018584],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_69b1b0ac148b2898be4120f486432953 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_334890b3d1b501b2b5739aa1a218fcad.setIcon(icon_69b1b0ac148b2898be4120f486432953);
+        
+    
+        var popup_14eb92e515d0819704e4987b20e87541 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_1e76004e402e8645fd0d9f4d36b11b27 = $(`<div id="html_1e76004e402e8645fd0d9f4d36b11b27" style="width: 100.0%; height: 100.0%;"><h1>Smash on Main 15 / Smash Undercover (Halloween Edition) – $100 Pot Bonus</h1><br><span style='font-size: 14px;'>Start Time: 1:00 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 28-Oct</span><br>Event Link: <a href='https://wismash.com/events/smash-on-main-15/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2023/09/Smash-on-Main-Halloween-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_14eb92e515d0819704e4987b20e87541.setContent(html_1e76004e402e8645fd0d9f4d36b11b27);
+            
+        
+
+        marker_334890b3d1b501b2b5739aa1a218fcad.bindPopup(popup_14eb92e515d0819704e4987b20e87541)
+        ;
+
+        
+    
+    
+            var marker_5b78b6cc5cc2aff937130fcc692b129e = L.marker(
+                [43.0727206, -89.40156223766753],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_610f2884aea68f60309b7a3b1ebaba4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5b78b6cc5cc2aff937130fcc692b129e.setIcon(icon_610f2884aea68f60309b7a3b1ebaba4b);
+        
+    
+        var popup_db6741391148427ea82409039aab95a2 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_ef1ce7a1e003b15f0015f267e70a0f5d = $(`<div id="html_ef1ce7a1e003b15f0015f267e70a0f5d" style="width: 100.0%; height: 100.0%;"><h1>Between 2 Lakes – A Madison Smash Bros. Tournament</h1><br><span style='font-size: 14px;'>Start Time: 12:00 pm - 7:00 pm</span><br><span style='font-size: 14px;'>Date: 29-Oct</span><br>Event Link: <a href='https://wismash.com/events/between-2-lakes-repeating-fall-23/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Between-Two-Lakes-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_db6741391148427ea82409039aab95a2.setContent(html_ef1ce7a1e003b15f0015f267e70a0f5d);
+            
+        
+
+        marker_5b78b6cc5cc2aff937130fcc692b129e.bindPopup(popup_db6741391148427ea82409039aab95a2)
+        ;
+
+        
+    
+    
+            var marker_e74db4686fed5d42ebc2436db653f5dc = L.marker(
+                [43.0727206, -89.40156223766753],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_2bd8a3654e903c797272e3c8b4922830 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e74db4686fed5d42ebc2436db653f5dc.setIcon(icon_2bd8a3654e903c797272e3c8b4922830);
+        
+    
+        var popup_8bf7455647bad807f5f43dab29ee810c = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_fca74bf876f8f507b12d56a6904bef1b = $(`<div id="html_fca74bf876f8f507b12d56a6904bef1b" style="width: 100.0%; height: 100.0%;"><h1>Between 2 Lakes – A Madison Smash Bros. Tournament</h1><br><span style='font-size: 14px;'>Start Time: 12:00 pm - 7:00 pm</span><br><span style='font-size: 14px;'>Date: 29-Oct</span><br>Event Link: <a href='https://wismash.com/events/between-2-lakes-repeating-fall-23/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Between-Two-Lakes-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_8bf7455647bad807f5f43dab29ee810c.setContent(html_fca74bf876f8f507b12d56a6904bef1b);
+            
+        
+
+        marker_e74db4686fed5d42ebc2436db653f5dc.bindPopup(popup_8bf7455647bad807f5f43dab29ee810c)
+        ;
+
+        
+    
+    
+            var marker_4ddce00a5015d25a74365a7b0694cb54 = L.marker(
+                [43.0727206, -89.40156223766753],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_d6bff5d496c745abe81e14b7f26758b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4ddce00a5015d25a74365a7b0694cb54.setIcon(icon_d6bff5d496c745abe81e14b7f26758b8);
+        
+    
+        var popup_548668399938311e9e261651aae19e2c = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_802871fb5a481a9dbdff625dee96f97d = $(`<div id="html_802871fb5a481a9dbdff625dee96f97d" style="width: 100.0%; height: 100.0%;"><h1>Between 2 Lakes – A Madison Smash Bros. Tournament</h1><br><span style='font-size: 14px;'>Start Time: 12:00 pm - 7:00 pm</span><br><span style='font-size: 14px;'>Date: 12-Nov</span><br>Event Link: <a href='https://wismash.com/events/between-2-lakes-repeating-fall-23/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Between-Two-Lakes-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_548668399938311e9e261651aae19e2c.setContent(html_802871fb5a481a9dbdff625dee96f97d);
+            
+        
+
+        marker_4ddce00a5015d25a74365a7b0694cb54.bindPopup(popup_548668399938311e9e261651aae19e2c)
+        ;
+
+        
+    
+    
+            var marker_92b25de215499408599fa93586b5e8fa = L.marker(
+                [43.0727206, -89.40156223766753],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_93befe222f795d39276a4c560bb0276b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_92b25de215499408599fa93586b5e8fa.setIcon(icon_93befe222f795d39276a4c560bb0276b);
+        
+    
+        var popup_9cebbbc0aead665274d43eb64977d2a6 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3e2df9f58fb8eb6258f903721391e783 = $(`<div id="html_3e2df9f58fb8eb6258f903721391e783" style="width: 100.0%; height: 100.0%;"><h1>Between 2 Lakes – A Madison Smash Bros. Tournament</h1><br><span style='font-size: 14px;'>Start Time: 12:00 pm - 7:00 pm</span><br><span style='font-size: 14px;'>Date: 12-Nov</span><br>Event Link: <a href='https://wismash.com/events/between-2-lakes-repeating-fall-23/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Between-Two-Lakes-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_9cebbbc0aead665274d43eb64977d2a6.setContent(html_3e2df9f58fb8eb6258f903721391e783);
+            
+        
+
+        marker_92b25de215499408599fa93586b5e8fa.bindPopup(popup_9cebbbc0aead665274d43eb64977d2a6)
+        ;
+
+        
+    
+    
+            var marker_09bbef5cfc769b6ea7d06e690632f500 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_82f0445d9735e605e20594f586b62862 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_09bbef5cfc769b6ea7d06e690632f500.setIcon(icon_82f0445d9735e605e20594f586b62862);
+        
+    
+        var popup_53f8008c18e6710d09326d269dfb1cb9 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_f3789bf57bf4f74570301c4febf8b039 = $(`<div id="html_f3789bf57bf4f74570301c4febf8b039" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 30-Oct</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_53f8008c18e6710d09326d269dfb1cb9.setContent(html_f3789bf57bf4f74570301c4febf8b039);
+            
+        
+
+        marker_09bbef5cfc769b6ea7d06e690632f500.bindPopup(popup_53f8008c18e6710d09326d269dfb1cb9)
+        ;
+
+        
+    
+    
+            var marker_7e9a99f71fb5e5dbac4759d37df88193 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_f20af7f421539ac5ab1f0ea39bca7c34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7e9a99f71fb5e5dbac4759d37df88193.setIcon(icon_f20af7f421539ac5ab1f0ea39bca7c34);
+        
+    
+        var popup_935454ae4f8b8d4c30702478b8076d8c = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_fc6ccc61d02eb8907e358b91ef0031ed = $(`<div id="html_fc6ccc61d02eb8907e358b91ef0031ed" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 30-Oct</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_935454ae4f8b8d4c30702478b8076d8c.setContent(html_fc6ccc61d02eb8907e358b91ef0031ed);
+            
+        
+
+        marker_7e9a99f71fb5e5dbac4759d37df88193.bindPopup(popup_935454ae4f8b8d4c30702478b8076d8c)
+        ;
+
+        
+    
+    
+            var marker_55938f6fbebf5e853ab7cdcd4ee7a35e = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_1c1a809ee09e3e1f0cb57e3cb516ac5b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_55938f6fbebf5e853ab7cdcd4ee7a35e.setIcon(icon_1c1a809ee09e3e1f0cb57e3cb516ac5b);
+        
+    
+        var popup_c114b8417b76314dfa1c19c35133c1d9 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_836801826e8c8388a4611564c9c7f2e9 = $(`<div id="html_836801826e8c8388a4611564c9c7f2e9" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 30-Oct</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_c114b8417b76314dfa1c19c35133c1d9.setContent(html_836801826e8c8388a4611564c9c7f2e9);
+            
+        
+
+        marker_55938f6fbebf5e853ab7cdcd4ee7a35e.bindPopup(popup_c114b8417b76314dfa1c19c35133c1d9)
+        ;
+
+        
+    
+    
+            var marker_29b5fe1116febac86042d6361929dc56 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_c27021118649a483e762a475f3e7943c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_29b5fe1116febac86042d6361929dc56.setIcon(icon_c27021118649a483e762a475f3e7943c);
+        
+    
+        var popup_ebc375d1f4bcebf7220dce23def0856d = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_e0bd704e23a26ef97560cc5a3347ac97 = $(`<div id="html_e0bd704e23a26ef97560cc5a3347ac97" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 6-Nov</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_ebc375d1f4bcebf7220dce23def0856d.setContent(html_e0bd704e23a26ef97560cc5a3347ac97);
+            
+        
+
+        marker_29b5fe1116febac86042d6361929dc56.bindPopup(popup_ebc375d1f4bcebf7220dce23def0856d)
+        ;
+
+        
+    
+    
+            var marker_939ce18b4d5a2ffe9bccac6b42615928 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_00417b9162f3639664e3b0018fe447ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_939ce18b4d5a2ffe9bccac6b42615928.setIcon(icon_00417b9162f3639664e3b0018fe447ac);
+        
+    
+        var popup_090762233871dd5be14640c4bb42bf26 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_03de98f8949747d6e43928cad328903a = $(`<div id="html_03de98f8949747d6e43928cad328903a" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 6-Nov</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_090762233871dd5be14640c4bb42bf26.setContent(html_03de98f8949747d6e43928cad328903a);
+            
+        
+
+        marker_939ce18b4d5a2ffe9bccac6b42615928.bindPopup(popup_090762233871dd5be14640c4bb42bf26)
+        ;
+
+        
+    
+    
+            var marker_41362cf93c08927cfe772cac4a1b1563 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_c38aa51f4159453615f8aed667774f94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_41362cf93c08927cfe772cac4a1b1563.setIcon(icon_c38aa51f4159453615f8aed667774f94);
+        
+    
+        var popup_596ad6cf7a7d684f1b753f234347bd57 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3076b8dab768f86bf9769b3d050106e1 = $(`<div id="html_3076b8dab768f86bf9769b3d050106e1" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 6-Nov</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_596ad6cf7a7d684f1b753f234347bd57.setContent(html_3076b8dab768f86bf9769b3d050106e1);
+            
+        
+
+        marker_41362cf93c08927cfe772cac4a1b1563.bindPopup(popup_596ad6cf7a7d684f1b753f234347bd57)
+        ;
+
+        
+    
+    
+            var marker_041bc340bf0d863c8c05ced64bc49698 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_1ab4da2a180d09cfc3da65c936300732 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_041bc340bf0d863c8c05ced64bc49698.setIcon(icon_1ab4da2a180d09cfc3da65c936300732);
+        
+    
+        var popup_4d10e43a00d194f48f5e7c21e21885bd = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_9b185bf5edae1a05f0e5128cb838b656 = $(`<div id="html_9b185bf5edae1a05f0e5128cb838b656" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 13-Nov</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_4d10e43a00d194f48f5e7c21e21885bd.setContent(html_9b185bf5edae1a05f0e5128cb838b656);
+            
+        
+
+        marker_041bc340bf0d863c8c05ced64bc49698.bindPopup(popup_4d10e43a00d194f48f5e7c21e21885bd)
+        ;
+
+        
+    
+    
+            var marker_dc703ba6fb4ff444dc82898d1d7f47c7 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_9d398b048f484232da4b255647e65bef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dc703ba6fb4ff444dc82898d1d7f47c7.setIcon(icon_9d398b048f484232da4b255647e65bef);
+        
+    
+        var popup_412428304c4885b08f2593e10147907f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_5112edf37dcf70af4e4dcae1442623fb = $(`<div id="html_5112edf37dcf70af4e4dcae1442623fb" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 13-Nov</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_412428304c4885b08f2593e10147907f.setContent(html_5112edf37dcf70af4e4dcae1442623fb);
+            
+        
+
+        marker_dc703ba6fb4ff444dc82898d1d7f47c7.bindPopup(popup_412428304c4885b08f2593e10147907f)
+        ;
+
+        
+    
+    
+            var marker_c6e6e7df9218a79a651913c0f06835c6 = L.marker(
+                [44.294679, -88.405806],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_2b56eea4998812ba50a33d777f2f42ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c6e6e7df9218a79a651913c0f06835c6.setIcon(icon_2b56eea4998812ba50a33d777f2f42ac);
+        
+    
+        var popup_a3544e41d7dd3c527fc8bf4fadd0ed74 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_24d49fea9b6bc72768fe09c343c10445 = $(`<div id="html_24d49fea9b6bc72768fe09c343c10445" style="width: 100.0%; height: 100.0%;"><h1>Phantasm</h1><br><span style='font-size: 14px;'>Start Time: 4:15 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 13-Nov</span><br>Event Link: <a href='https://wismash.com/events/phantasm-repeating/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2021/10/Phantasm-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_a3544e41d7dd3c527fc8bf4fadd0ed74.setContent(html_24d49fea9b6bc72768fe09c343c10445);
+            
+        
+
+        marker_c6e6e7df9218a79a651913c0f06835c6.bindPopup(popup_a3544e41d7dd3c527fc8bf4fadd0ed74)
+        ;
+
+        
+    
+    
+            var marker_905d77790eeb583e04d870e63d9e505c = L.marker(
+                [43.05627656613706, -89.49564452334404],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_fe463facaeeb6cb9576200acf513200e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_905d77790eeb583e04d870e63d9e505c.setIcon(icon_fe463facaeeb6cb9576200acf513200e);
+        
+    
+        var popup_7c774605c0ac17abe2a8ced25fe59fd2 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_e32eb482447e1e27dddfdfe25054fc4e = $(`<div id="html_e32eb482447e1e27dddfdfe25054fc4e" style="width: 100.0%; height: 100.0%;"><h1>West Towne Brawl</h1><br><span style='font-size: 14px;'>Start Time: 6:00 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 30-Oct</span><br>Event Link: <a href='https://wismash.com/events/west-towne-brawl-29/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/12/West-Towne-Brawl-2-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_7c774605c0ac17abe2a8ced25fe59fd2.setContent(html_e32eb482447e1e27dddfdfe25054fc4e);
+            
+        
+
+        marker_905d77790eeb583e04d870e63d9e505c.bindPopup(popup_7c774605c0ac17abe2a8ced25fe59fd2)
+        ;
+
+        
+    
+    
+            var marker_5d1991f345c2317e5d811b5ca640486d = L.marker(
+                [43.05627656613706, -89.49564452334404],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_33417a7e61a64e873d694f1a5afd69a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5d1991f345c2317e5d811b5ca640486d.setIcon(icon_33417a7e61a64e873d694f1a5afd69a4);
+        
+    
+        var popup_991d8c9bd9f1b15c808af63df4fc5797 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_bc0038b692669cbe45cdabfa845c0445 = $(`<div id="html_bc0038b692669cbe45cdabfa845c0445" style="width: 100.0%; height: 100.0%;"><h1>West Towne Brawl</h1><br><span style='font-size: 14px;'>Start Time: 6:00 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 30-Oct</span><br>Event Link: <a href='https://wismash.com/events/west-towne-brawl-29/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/12/West-Towne-Brawl-2-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_991d8c9bd9f1b15c808af63df4fc5797.setContent(html_bc0038b692669cbe45cdabfa845c0445);
+            
+        
+
+        marker_5d1991f345c2317e5d811b5ca640486d.bindPopup(popup_991d8c9bd9f1b15c808af63df4fc5797)
+        ;
+
+        
+    
+    
+            var marker_cbf54bf087ef05b8518829f41b12a710 = L.marker(
+                [43.05627656613706, -89.49564452334404],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_593fbcbe9140863eaf7a60b83916c4c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cbf54bf087ef05b8518829f41b12a710.setIcon(icon_593fbcbe9140863eaf7a60b83916c4c0);
+        
+    
+        var popup_b0fcf8817516fc7156f4a06691996ace = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_85d5e96c75e7bd37e02e57c5465783de = $(`<div id="html_85d5e96c75e7bd37e02e57c5465783de" style="width: 100.0%; height: 100.0%;"><h1>West Towne Brawl</h1><br><span style='font-size: 14px;'>Start Time: 6:00 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 6-Nov</span><br>Event Link: <a href='https://wismash.com/events/west-towne-brawl-29/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/12/West-Towne-Brawl-2-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_b0fcf8817516fc7156f4a06691996ace.setContent(html_85d5e96c75e7bd37e02e57c5465783de);
+            
+        
+
+        marker_cbf54bf087ef05b8518829f41b12a710.bindPopup(popup_b0fcf8817516fc7156f4a06691996ace)
+        ;
+
+        
+    
+    
+            var marker_0601bdbeeaa8be9aa38e23b409ae2f12 = L.marker(
+                [43.05627656613706, -89.49564452334404],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_10a2c9f27d52b8422d19e976b4945c40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0601bdbeeaa8be9aa38e23b409ae2f12.setIcon(icon_10a2c9f27d52b8422d19e976b4945c40);
+        
+    
+        var popup_dc548c44a2e8da08d520979b3cd0592f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_51e9d41bed3376fb2779cdd3d74d89cb = $(`<div id="html_51e9d41bed3376fb2779cdd3d74d89cb" style="width: 100.0%; height: 100.0%;"><h1>West Towne Brawl</h1><br><span style='font-size: 14px;'>Start Time: 6:00 pm - 10:00 pm</span><br><span style='font-size: 14px;'>Date: 6-Nov</span><br>Event Link: <a href='https://wismash.com/events/west-towne-brawl-29/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/12/West-Towne-Brawl-2-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_dc548c44a2e8da08d520979b3cd0592f.setContent(html_51e9d41bed3376fb2779cdd3d74d89cb);
+            
+        
+
+        marker_0601bdbeeaa8be9aa38e23b409ae2f12.bindPopup(popup_dc548c44a2e8da08d520979b3cd0592f)
+        ;
+
+        
+    
+    
+            var marker_2e81a02afb9b5d473cf0054310c8bb6d = L.marker(
+                [42.97528055, -87.86049079474304],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_598a924807ce13b76fcd4690248af5d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2e81a02afb9b5d473cf0054310c8bb6d.setIcon(icon_598a924807ce13b76fcd4690248af5d5);
+        
+    
+        var popup_51422237bb404dc689f55ab1b5d91c86 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_50a290523d2e999e3bed08e2ef35c41b = $(`<div id="html_50a290523d2e999e3bed08e2ef35c41b" style="width: 100.0%; height: 100.0%;"><h1>The Construct 193</h1><br><span style='font-size: 14px;'>Start Time: 11:30 am - 9:00 pm</span><br><span style='font-size: 14px;'>Date: 5-Nov</span><br>Event Link: <a href='https://wismash.com/events/construct-193/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/03/Construct-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_51422237bb404dc689f55ab1b5d91c86.setContent(html_50a290523d2e999e3bed08e2ef35c41b);
+            
+        
+
+        marker_2e81a02afb9b5d473cf0054310c8bb6d.bindPopup(popup_51422237bb404dc689f55ab1b5d91c86)
+        ;
+
+        
+    
+    
+            var marker_33089888549a97d4545f61f3a07aedd8 = L.marker(
+                [42.97528055, -87.86049079474304],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_5bb36b07350ef7f59d1f6616ac5c613e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_33089888549a97d4545f61f3a07aedd8.setIcon(icon_5bb36b07350ef7f59d1f6616ac5c613e);
+        
+    
+        var popup_428965f81a34402c748d7d41573513a5 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_88298cf5af6804056a8acfdb3d8e77d5 = $(`<div id="html_88298cf5af6804056a8acfdb3d8e77d5" style="width: 100.0%; height: 100.0%;"><h1>The Construct 193</h1><br><span style='font-size: 14px;'>Start Time: 11:30 am - 9:00 pm</span><br><span style='font-size: 14px;'>Date: 5-Nov</span><br>Event Link: <a href='https://wismash.com/events/construct-193/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/03/Construct-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_428965f81a34402c748d7d41573513a5.setContent(html_88298cf5af6804056a8acfdb3d8e77d5);
+            
+        
+
+        marker_33089888549a97d4545f61f3a07aedd8.bindPopup(popup_428965f81a34402c748d7d41573513a5)
+        ;
+
+        
+    
+    
+            var marker_fffe30cc38bff941acf6898667ce262a = L.marker(
+                [42.97528055, -87.86049079474304],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_27a3872fe66db02007f1c588737528cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fffe30cc38bff941acf6898667ce262a.setIcon(icon_27a3872fe66db02007f1c588737528cd);
+        
+    
+        var popup_e37d99f1fdf109b965e9ff28341ef61c = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_97692b256de2bfc54302da4475fe8cb0 = $(`<div id="html_97692b256de2bfc54302da4475fe8cb0" style="width: 100.0%; height: 100.0%;"><h1>The Construct 193</h1><br><span style='font-size: 14px;'>Start Time: 11:30 am - 9:00 pm</span><br><span style='font-size: 14px;'>Date: 5-Nov</span><br>Event Link: <a href='https://wismash.com/events/construct-193/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/03/Construct-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_e37d99f1fdf109b965e9ff28341ef61c.setContent(html_97692b256de2bfc54302da4475fe8cb0);
+            
+        
+
+        marker_fffe30cc38bff941acf6898667ce262a.bindPopup(popup_e37d99f1fdf109b965e9ff28341ef61c)
+        ;
+
+        
+    
+    
+            var marker_c07007d674438629eedcbeb64408d5e7 = L.marker(
+                [42.97528055, -87.86049079474304],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_57e3e293efb0d8169c5a9625334318d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c07007d674438629eedcbeb64408d5e7.setIcon(icon_57e3e293efb0d8169c5a9625334318d8);
+        
+    
+        var popup_2825eda30a5fab06cedf47f068cb2755 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3877da8cdaa1c59cf14853f4482a70e3 = $(`<div id="html_3877da8cdaa1c59cf14853f4482a70e3" style="width: 100.0%; height: 100.0%;"><h1>The Construct 193</h1><br><span style='font-size: 14px;'>Start Time: 11:30 am - 9:00 pm</span><br><span style='font-size: 14px;'>Date: 5-Nov</span><br>Event Link: <a href='https://wismash.com/events/construct-193/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2022/03/Construct-Banner-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_2825eda30a5fab06cedf47f068cb2755.setContent(html_3877da8cdaa1c59cf14853f4482a70e3);
+            
+        
+
+        marker_c07007d674438629eedcbeb64408d5e7.bindPopup(popup_2825eda30a5fab06cedf47f068cb2755)
+        ;
+
+        
+    
+    
+            var marker_d790d015b01638a78c4ea5c85920644e = L.marker(
+                [43.25434005, -87.9147839235297],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_b51ba0157bb4ad76b98f49db9206f00b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d790d015b01638a78c4ea5c85920644e.setIcon(icon_b51ba0157bb4ad76b98f49db9206f00b);
+        
+    
+        var popup_237dfe30ba2356c2e6066506854f874f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_8200c3d9dd41bb6f1276c1e9af901b49 = $(`<div id="html_8200c3d9dd41bb6f1276c1e9af901b49" style="width: 100.0%; height: 100.0%;"><h1>Falcon Smash Clash: Origins</h1><br><span style='font-size: 14px;'>Start Time: 11:45 am - 4:00 pm</span><br><span style='font-size: 14px;'>Date: 11-Nov</span><br>Event Link: <a href='https://wismash.com/events/falcon-smash-clash-origins/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2023/10/Falcon-Orgins-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_237dfe30ba2356c2e6066506854f874f.setContent(html_8200c3d9dd41bb6f1276c1e9af901b49);
+            
+        
+
+        marker_d790d015b01638a78c4ea5c85920644e.bindPopup(popup_237dfe30ba2356c2e6066506854f874f)
+        ;
+
+        
+    
+    
+            var marker_fa38352c2e9db7f5cbd9bcc50c475fdc = L.marker(
+                [43.25434005, -87.9147839235297],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_9852ac2ca48272f16fe5c8f31c519d61 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fa38352c2e9db7f5cbd9bcc50c475fdc.setIcon(icon_9852ac2ca48272f16fe5c8f31c519d61);
+        
+    
+        var popup_34547be02763e237fd5bf6ec0927d4db = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_cb40a89c50ba8149811b525da2d6ed73 = $(`<div id="html_cb40a89c50ba8149811b525da2d6ed73" style="width: 100.0%; height: 100.0%;"><h1>Falcon Smash Clash: Origins</h1><br><span style='font-size: 14px;'>Start Time: 11:45 am - 4:00 pm</span><br><span style='font-size: 14px;'>Date: 11-Nov</span><br>Event Link: <a href='https://wismash.com/events/falcon-smash-clash-origins/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2023/10/Falcon-Orgins-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_34547be02763e237fd5bf6ec0927d4db.setContent(html_cb40a89c50ba8149811b525da2d6ed73);
+            
+        
+
+        marker_fa38352c2e9db7f5cbd9bcc50c475fdc.bindPopup(popup_34547be02763e237fd5bf6ec0927d4db)
+        ;
+
+        
+    
+    
+            var marker_9f01c85478acf2524d3a04d0ad486504 = L.marker(
+                [43.25434005, -87.9147839235297],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_cd126ecee322caaf791f9ab6ed85405b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9f01c85478acf2524d3a04d0ad486504.setIcon(icon_cd126ecee322caaf791f9ab6ed85405b);
+        
+    
+        var popup_3b2b288fd7ebc884e39ba5ec3a9dcfbb = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_4c8b491a81816e0e5687202213631c23 = $(`<div id="html_4c8b491a81816e0e5687202213631c23" style="width: 100.0%; height: 100.0%;"><h1>Falcon Smash Clash: Origins</h1><br><span style='font-size: 14px;'>Start Time: 11:45 am - 4:00 pm</span><br><span style='font-size: 14px;'>Date: 11-Nov</span><br>Event Link: <a href='https://wismash.com/events/falcon-smash-clash-origins/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2023/10/Falcon-Orgins-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_3b2b288fd7ebc884e39ba5ec3a9dcfbb.setContent(html_4c8b491a81816e0e5687202213631c23);
+            
+        
+
+        marker_9f01c85478acf2524d3a04d0ad486504.bindPopup(popup_3b2b288fd7ebc884e39ba5ec3a9dcfbb)
+        ;
+
+        
+    
+    
+            var marker_38d6f4ad08d3a71949df18acde18f9f6 = L.marker(
+                [43.25434005, -87.9147839235297],
+                {}
+            ).addTo(map_97d2fed05a638aff0a1d62e678015d08);
+        
+    
+            var icon_7a2256b9e9359ddbb84cecad6ec5a092 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_38d6f4ad08d3a71949df18acde18f9f6.setIcon(icon_7a2256b9e9359ddbb84cecad6ec5a092);
+        
+    
+        var popup_bd81b4db89140930518376cce171590f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_585e1ac0ff152d5342fff516ccfb2114 = $(`<div id="html_585e1ac0ff152d5342fff516ccfb2114" style="width: 100.0%; height: 100.0%;"><h1>Falcon Smash Clash: Origins</h1><br><span style='font-size: 14px;'>Start Time: 11:45 am - 4:00 pm</span><br><span style='font-size: 14px;'>Date: 11-Nov</span><br>Event Link: <a href='https://wismash.com/events/falcon-smash-clash-origins/'>Link</a><br><img src='https://wismash.com/wp-content/uploads/2023/10/Falcon-Orgins-300x300.png' alt='Tournament Image' width='300' height='300'></div>`)[0];
+                popup_bd81b4db89140930518376cce171590f.setContent(html_585e1ac0ff152d5342fff516ccfb2114);
+            
+        
+
+        marker_38d6f4ad08d3a71949df18acde18f9f6.bindPopup(popup_bd81b4db89140930518376cce171590f)
+        ;
+
+        
+    
+</script>
+</html>
